@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:jogo/controllers/timer_controller.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -10,6 +12,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    final timer = context.watch<TimerController>();
     return Scaffold(
       body: SizedBox(
         height: MediaQuery.of(context).size.height,
@@ -37,6 +40,7 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     ElevatedButton(
                       onPressed: (){
+                        timer.iniciaTempoPadrao();
                         Navigator.of(context).pushReplacementNamed('jogo');
                       }, 
                       child: Text('Jogar')
