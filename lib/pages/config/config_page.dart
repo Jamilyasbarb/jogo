@@ -3,7 +3,16 @@ import 'package:flutter/material.dart';
 List<String> opcoesDrop = [
     'Por Tempo',
     'Por Palavra',
-  ];
+];
+List<String> opcoesCores = [
+    'Amarelo',
+    'Laranja',
+    'Verde',
+    'Azul',
+    'Vermelho',
+    'Roxo',
+    'Preto',
+];
 
 class ConfigPage extends StatefulWidget {
   const ConfigPage({super.key});
@@ -13,15 +22,6 @@ class ConfigPage extends StatefulWidget {
 }
 
 class _ConfigPageState extends State<ConfigPage> {
-  List<String> opcoesCores = [
-    'Amarelo',
-    'Laranja',
-    'Verde',
-    'Azul',
-    'Vermelho',
-    'Roxo',
-    'Preto',
-  ];
 
   List<bool> check = [];
   
